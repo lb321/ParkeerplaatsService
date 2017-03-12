@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nie="http://parkeerplaatsservice/berichten/nieuweautorequest">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nie:nieuweautorequest>
+         <!--You may enter the following 2 items in any order-->
+         <kenteken>AB-12-34</kenteken>
+         <!--Optional:-->
+         <merk>BMW</merk>
+      </nie:nieuweautorequest>
+   </soapenv:Body>
+</soapenv:Envelope>

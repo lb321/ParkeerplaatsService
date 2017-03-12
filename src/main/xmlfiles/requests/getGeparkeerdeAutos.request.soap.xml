@@ -1,0 +1,7 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://parkeerplaatsservice/berichten/getautosrequest">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <get:getautosrequest>
+      </get:getautosrequest>
+   </soapenv:Body>
+</soapenv:Envelope>

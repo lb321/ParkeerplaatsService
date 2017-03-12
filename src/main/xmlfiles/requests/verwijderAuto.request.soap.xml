@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://parkeerplaatsservice/berichten/verwijderautorequest">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ver:verwijderautorequest>
+         <!--You may enter the following 1 items in any order-->
+         <kenteken>12-ABC-3</kenteken>
+      </ver:verwijderautorequest>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://parkeerplaatsservice/errors/fault"
+           targetNamespace="http://parkeerplaatsservice/errors/fault">
+    <xs:element name="fault" type="tns:fault"/>
+    <xs:complexType name="fault">
+        <xs:sequence>
+            <xs:element name="errorCode" type="xs:short" minOccurs="0" maxOccurs="1" />
+            <xs:element name="message" type="xs:string" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

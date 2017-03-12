@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://parkeerplaatsservice/berichten/getemptyrequest" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+           targetNamespace="http://parkeerplaatsservice/berichten/getemptyrequest">
+    <xs:element name="getrequest" type="tns:getrequest" />
+        <xs:complexType name="getrequest">
+            <xs:all>
+                <!-- weet niet hoe ik een leeg request kan sturen, daarom dit element; is niet verplicht -->
+                <xs:element nillable="true" name="message" minOccurs="0" maxOccurs="1"/>
+            </xs:all>
+        </xs:complexType>
+</xs:schema>

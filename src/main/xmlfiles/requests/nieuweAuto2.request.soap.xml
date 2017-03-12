@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nie="http://parkeerplaatsservice/berichten/nieuweautorequest">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nie:nieuweautorequest>
+         <!--You may enter the following 2 items in any order-->
+         <kenteken>ABC-98-D</kenteken>
+      </nie:nieuweautorequest>
+   </soapenv:Body>
+</soapenv:Envelope>

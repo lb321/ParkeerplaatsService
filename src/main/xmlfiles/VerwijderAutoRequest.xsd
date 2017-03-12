@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://parkeerplaatsservice/berichten/verwijderautorequest" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+           xmlns:autons="http://parkeerplaatsservice/objecten/auto"
+           targetNamespace="http://parkeerplaatsservice/berichten/verwijderautorequest">
+    <xs:import namespace="http://parkeerplaatsservice/objecten/auto" schemaLocation="Auto.xsd" />
+    <xs:element name="verwijderautorequest" type="tns:verwijderautorequest" />
+        <xs:complexType name="verwijderautorequest">
+            <xs:all minOccurs="0">
+                <xs:element name="kenteken" type="autons:kenteken"></xs:element>
+            </xs:all>
+        </xs:complexType>
+</xs:schema>

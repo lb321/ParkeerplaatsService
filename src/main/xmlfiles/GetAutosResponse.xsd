@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://parkeerplaatsservice/berichten/getautosresponse"
+           xmlns:autons="http://parkeerplaatsservice/objecten/auto"
+           targetNamespace="http://parkeerplaatsservice/berichten/getautosresponse">
+    <xs:import namespace="http://parkeerplaatsservice/objecten/auto" schemaLocation="Auto.xsd" />
+    <xs:element name="getautosresponse" type="tns:getautosresponse"/>
+    <xs:complexType name="getautosresponse">
+        <xs:sequence>
+
+            <xs:element name="auto" minOccurs="0" maxOccurs="unbounded" type="autons:auto">
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

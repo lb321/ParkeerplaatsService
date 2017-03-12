@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://parkeerplaatsservice/berichten/getautosrequest" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+           targetNamespace="http://parkeerplaatsservice/berichten/getautosrequest">
+    <xs:element name="getautosrequest" type="tns:getautosrequest" />
+        <!-- dit mag een leeg request zijn, aangezien je alleen iets wilt krijgen -->
+        <xs:complexType name="getautosrequest">
+            <xs:all minOccurs="0">
+                <xs:element name="iets" type="xs:string"></xs:element>
+            </xs:all>
+        </xs:complexType>
+</xs:schema>

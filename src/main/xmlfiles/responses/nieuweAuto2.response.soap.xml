@@ -1,0 +1,13 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <S:Fault xmlns:ns4="http://www.w3.org/2003/05/soap-envelope">
+         <faultcode>S:Server</faultcode>
+         <faultstring>Fout met nieuwe auto toevoegen</faultstring>
+         <detail>
+            <ns5:fault xmlns:ns5="http://parkeerplaatsservice/errors/fault" xmlns:ns10="http://parkeerplaatsservice/berichten/nieuweautorequest" xmlns:ns11="http://parkeerplaatsservice/berichten/getaantallenrequest" xmlns:ns2="http://parkeerplaatsservice/berichten/getaantallenresponse" xmlns:ns3="http://parkeerplaatsservice/berichten/nieuweautoresponse" xmlns:ns4="http://parkeerplaatsservice/berichten/getautosresponse" xmlns:ns6="http://parkeerplaatsservice/objecten/auto" xmlns:ns7="http://parkeerplaatsservice/enums/automerk" xmlns:ns8="http://parkeerplaatsservice/berichten/verwijderautorequest" xmlns:ns9="http://parkeerplaatsservice/berichten/getautosrequest">
+               <message>De parkeerplaats is vol.</message>
+            </ns5:fault>
+         </detail>
+      </S:Fault>
+   </S:Body>
+</S:Envelope>

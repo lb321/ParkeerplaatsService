@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://parkeerplaatsservice/berichten/nieuweautoresponse"
+           targetNamespace="http://parkeerplaatsservice/berichten/nieuweautoresponse">
+    <xs:element name="nieuweautoresponse" type="tns:nieuweautoresponse"/>
+    <xs:complexType name="nieuweautoresponse">
+        <xs:all minOccurs="1" maxOccurs="1">
+            <xs:element name="gelukt" type="xs:boolean"></xs:element>
+        </xs:all>
+    </xs:complexType>
+</xs:schema>

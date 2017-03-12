@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://parkeerplaatsservice/berichten/getaantallenrequest" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+           targetNamespace="http://parkeerplaatsservice/berichten/getaantallenrequest">
+    <xs:element name="getaantallen" type="tns:getaantallenrequest" />
+        <xs:complexType name="getaantallenrequest">
+            <xs:all>
+                <!-- kan geen empty request, dus kun je tijd meegeven, hier gebeurd alleen niks mee -->
+                <xs:element name="tijd" type="xs:dateTime" minOccurs="0" maxOccurs="1">
+                    <!--<xs:restriction base="xs:dateTime">
+                        <xs:maxInclusive value="current-dateTime()"/>
+                    </xs:restriction> -->
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+</xs:schema>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://parkeerplaatsservice/berichten/getaantallenresponse"
+           targetNamespace="http://parkeerplaatsservice/berichten/getaantallenresponse">
+    <xs:element name="getaantallenresponse" type="tns:getaantallenresponse"/>
+    <xs:complexType name="getaantallenresponse">
+        <!-- all gebruikt omdat deze 3 elementen alle maal 1x moeten voorkomen. -->
+        <xs:all minOccurs="1" maxOccurs="1">
+            <!--<xs:element name="tijd" type="xs:dateTime" />-->
+            <xs:element name="bezet" type="xs:nonNegativeInteger" />
+            <xs:element name="vrij" type="xs:nonNegativeInteger" />
+            <xs:element name="totaal" type="xs:positiveInteger" />
+        </xs:all>
+    </xs:complexType>
+</xs:schema>

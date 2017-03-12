@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="8e964a37-2a11-4b9f-9102-8c34a9b95296" activeEnvironment="Default" name="ParkeerplaatsService" resourceRoot="" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="TestSuite" value="TestSuite 1"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Save Project" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="TestCase" value="TestCase 1"/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="Endpoint" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" id="a848ec2a-ff50-4c62-a46d-73d34d566f2f" wsaVersion="NONE" name="WS-Binding" type="wsdl" bindingName="{http://parkeerplaatsservice/berichten/message}WS-Binding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/lucas/workspace/parkserviceopenshift/parkeerplaatsservice/src/main/java/xmlfiles/ParkeerplaatsService.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/lucas/workspace/parkserviceopenshift/parkeerplaatsservice/src/main/java/xmlfiles/ParkeerplaatsService.wsdl"><con:part><con:url>file:/C:/Users/lucas/workspace/parkserviceopenshift/parkeerplaatsservice/src/main/java/xmlfiles/ParkeerplaatsService.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://parkeerplaatsservice/berichten/message" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:getreq="http://parkeerplaatsservice/berichten/getaantallenrequest" xmlns:getrsp="http://parkeerplaatsservice/berichten/getaantallenresponse" xmlns:nieuwreq="http://parkeerplaatsservice/berichten/nieuweautorequest" xmlns:nieuwrsp="http://parkeerplaatsservice/berichten/nieuweautoresponse" xmlns:getautosreq="http://parkeerplaatsservice/berichten/getautosrequest" xmlns:getautosrsp="http://parkeerplaatsservice/berichten/getautosresponse" xmlns:verwijderautoreq="http://parkeerplaatsservice/berichten/verwijderautorequest" xmlns:fault="http://parkeerplaatsservice/errors/fault" xmlns:tns="http://parkeerplaatsservice/berichten/message">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import namespace="http://parkeerplaatsservice/berichten/getaantallenrequest" schemaLocation="GetAantallenRequest.xsd"/>
+      <xsd:import namespace="http://parkeerplaatsservice/berichten/getaantallenresponse" schemaLocation="GetAantallenResponse.xsd"/>
+      <xsd:import namespace="http://parkeerplaatsservice/berichten/nieuweautorequest" schemaLocation="NieuweAutoRequest.xsd"/>
+      <xsd:import namespace="http://parkeerplaatsservice/berichten/nieuweautoresponse" schemaLocation="NieuweAutoResponse.xsd"/>
+      <xsd:import namespace="http://parkeerplaatsservice/berichten/getautosrequest" schemaLocation="GetAutosRequest.xsd"/>
+      <xsd:import namespace="http://parkeerplaatsservice/berichten/getautosresponse" schemaLocation="GetAutosResponse.xsd"/>
+      <xsd:import namespace="http://parkeerplaatsservice/berichten/verwijderautorequest" schemaLocation="VerwijderAutoRequest.xsd"/>
+      <xsd:import namespace="http://parkeerplaatsservice/errors/fault" schemaLocation="Fault.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getrequest">
+    <wsdl:part name="getrequest" element="getreq:getaantallen"/>
+  </wsdl:message>
+  <wsdl:message name="getresponse">
+    <wsdl:part name="getresponse" element="getrsp:getaantallenresponse"/>
+  </wsdl:message>
+  <wsdl:message name="nieuwrequest">
+    <wsdl:part name="nieuwrequest" element="nieuwreq:nieuweautorequest"/>
+  </wsdl:message>
+  <wsdl:message name="nieuwresponse">
+    <wsdl:part name="nieuwresponse" element="nieuwrsp:nieuweautoresponse"/>
+  </wsdl:message>
+  <wsdl:message name="getautosrequest">
+    <wsdl:part name="getautosrequest" element="getautosreq:getautosrequest"/>
+  </wsdl:message>
+  <wsdl:message name="getautosresponse">
+    <wsdl:part name="getautosresponse" element="getautosrsp:getautosresponse"/>
+  </wsdl:message>
+  <wsdl:message name="verwijderautorequest">
+    <wsdl:part name="verwijderautorequest" element="verwijderautoreq:verwijderautorequest"/>
+  </wsdl:message>
+  <wsdl:message name="inputfault">
+    <wsdl:part name="fault" element="fault:fault"/>
+  </wsdl:message>
+  <wsdl:portType name="PkS-Interface">
+    <wsdl:operation name="getAantalParkeerplaatsen">
+      <wsdl:input message="tns:getrequest"/>
+      <wsdl:output message="tns:getresponse"/>
+      <wsdl:fault name="inputfault" message="tns:inputfault"/>
+    </wsdl:operation>
+    <wsdl:operation name="nieuweAuto">
+      <wsdl:input message="tns:nieuwrequest"/>
+      <wsdl:output message="tns:nieuwresponse"/>
+      <wsdl:fault name="inputfault" message="tns:inputfault"/>
+    </wsdl:operation>
+    <wsdl:operation name="getGeparkeerdeAutos">
+      <wsdl:input message="tns:getautosrequest"/>
+      <wsdl:output message="tns:getautosresponse"/>
+      <wsdl:fault name="inputfault" message="tns:inputfault"/>
+    </wsdl:operation>
+    <wsdl:operation name="verwijderAuto">
+      <wsdl:input message="tns:verwijderautorequest"/>
+      <wsdl:output message="tns:nieuwresponse"/>
+      <wsdl:fault name="inputfault" message="tns:inputfault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS-Binding" type="tns:PkS-Interface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getAantalParkeerplaatsen">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="inputfault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="nieuweAuto">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="inputfault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getGeparkeerdeAutos">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="inputfault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="verwijderAuto">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="inputfault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="parkeerplaatsService">
+    <wsdl:port name="WS-Port" binding="tns:WS-Binding">
+      <soap:address location="http://parkeerplaatsserivce/services/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\lucas\workspace\parkserviceopenshift\parkeerplaatsservice\src\main\java\xmlfiles\GetAantallenRequest.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://parkeerplaatsservice/berichten/getaantallenrequest" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://parkeerplaatsservice/berichten/getaantallenrequest" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xs:element name="getaantallen" type="tns:getaantallenrequest"/>
+  <xs:complexType name="getaantallenrequest">
+    <xs:all>
+      <!--kan geen empty request, dus kun je tijd meegeven, hier gebeurd alleen niks mee-->
+      <xs:element name="tijd" type="xs:dateTime" minOccurs="0" maxOccurs="1">
+        <!--<xs:restriction base="xs:dateTime">
+                        <xs:maxInclusive value="current-dateTime()"/>
+                    </xs:restriction>-->
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\lucas\workspace\parkserviceopenshift\parkeerplaatsservice\src\main\java\xmlfiles\GetAantallenResponse.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://parkeerplaatsservice/berichten/getaantallenresponse" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://parkeerplaatsservice/berichten/getaantallenresponse">
+  <xs:element name="getaantallenresponse" type="tns:getaantallenresponse"/>
+  <xs:complexType name="getaantallenresponse">
+    <!--all gebruikt omdat deze 3 elementen alle maal 1x moeten voorkomen.-->
+    <xs:all minOccurs="1" maxOccurs="1">
+      <!--<xs:element name="tijd" type="xs:dateTime" />-->
+      <xs:element name="bezet" type="xs:nonNegativeInteger"/>
+      <xs:element name="vrij" type="xs:nonNegativeInteger"/>
+      <xs:element name="totaal" type="xs:positiveInteger"/>
+    </xs:all>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\lucas\workspace\parkserviceopenshift\parkeerplaatsservice\src\main\java\xmlfiles\NieuweAutoRequest.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://parkeerplaatsservice/berichten/nieuweautorequest" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://parkeerplaatsservice/berichten/nieuweautorequest" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:autons="http://parkeerplaatsservice/objecten/auto" xmlns:automerk="http://parkeerplaatsservice/enums/automerk">
+  <xs:import namespace="http://parkeerplaatsservice/objecten/auto" schemaLocation="Auto.xsd"/>
+  <xs:import namespace="http://parkeerplaatsservice/enums/automerk" schemaLocation="AutoMerk.xsd"/>
+  <xs:element name="nieuweautorequest" type="tns:nieuweautorequest"/>
+  <xs:complexType name="nieuweautorequest">
+    <xs:all>
+      <xs:element name="kenteken" type="autons:kenteken" minOccurs="1" maxOccurs="1"/>
+      <!--merk is niet verplicht, kenteken wel-->
+      <xs:element name="merk" type="automerk:automerk" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\lucas\workspace\parkserviceopenshift\parkeerplaatsservice\src\main\java\xmlfiles\Auto.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://parkeerplaatsservice/objecten/auto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://parkeerplaatsservice/objecten/auto" xmlns:automerk="http://parkeerplaatsservice/enums/automerk">
+  <xs:import namespace="http://parkeerplaatsservice/enums/automerk" schemaLocation="AutoMerk.xsd"/>
+  <xs:element name="auto" type="tns:auto"/>
+  <xs:complexType name="auto">
+    <xs:sequence>
+      <xs:element name="kenteken" type="tns:kenteken" minOccurs="1"/>
+      <xs:element name="aankomst" type="xs:dateTime" minOccurs="1"/>
+      <xs:element name="vertrek" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="merk" type="automerk:automerk" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="kenteken">
+    <xs:restriction base="xs:string">
+      <xs:length value="8"/>
+      <!--het kenteken is 8 characters lang en moet aan 1 van de onderstaande patronen voldoen-->
+      <!--\S = any character that is not white space,  \d = any digit-->
+      <xs:pattern value="\S\S-\d\d-\d\d|\d\d-\d\d-\S\S|\d\d-\S\S-\d\d|\S\S-\S\S-\d\d|\d\d-\S\S-\S\S|\d\d-\S\S\S-\d|\d-\S\S\S-\d\d|\S\S-\d\d\d-\S|\S-\d\d\d-\S\S|\S\S\S-\d\d-\S"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\lucas\workspace\parkserviceopenshift\parkeerplaatsservice\src\main\java\xmlfiles\AutoMerk.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://parkeerplaatsservice/enums/automerk" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://parkeerplaatsservice/enums/automerk">
+  <xs:element name="automerk" type="tns:automerk"/>
+  <xs:simpleType name="automerk">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Audi"/>
+      <xs:enumeration value="Volkswagen"/>
+      <xs:enumeration value="Volvo"/>
+      <xs:enumeration value="BMW"/>
+      <xs:enumeration value="Mercedes"/>
+      <xs:enumeration value="Toyota"/>
+      <xs:enumeration value="Seat"/>
+      <xs:enumeration value="Opel"/>
+      <xs:enumeration value="Saab"/>
+      <xs:enumeration value="Honda"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\lucas\workspace\parkserviceopenshift\parkeerplaatsservice\src\main\java\xmlfiles\NieuweAutoResponse.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://parkeerplaatsservice/berichten/nieuweautoresponse" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://parkeerplaatsservice/berichten/nieuweautoresponse">
+  <xs:element name="nieuweautoresponse" type="tns:nieuweautoresponse"/>
+  <xs:complexType name="nieuweautoresponse">
+    <xs:all minOccurs="1" maxOccurs="1">
+      <xs:element name="gelukt" type="xs:boolean"/>
+    </xs:all>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\lucas\workspace\parkserviceopenshift\parkeerplaatsservice\src\main\java\xmlfiles\GetAutosRequest.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://parkeerplaatsservice/berichten/getautosrequest" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://parkeerplaatsservice/berichten/getautosrequest" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xs:element name="getautosrequest" type="tns:getautosrequest"/>
+  <!--dit mag een leeg request zijn, aangezien je alleen iets wilt krijgen-->
+  <xs:complexType name="getautosrequest">
+    <xs:all minOccurs="0">
+      <xs:element name="iets" type="xs:string"/>
+    </xs:all>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\lucas\workspace\parkserviceopenshift\parkeerplaatsservice\src\main\java\xmlfiles\GetAutosResponse.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://parkeerplaatsservice/berichten/getautosresponse" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://parkeerplaatsservice/berichten/getautosresponse" xmlns:autons="http://parkeerplaatsservice/objecten/auto">
+  <xs:import namespace="http://parkeerplaatsservice/objecten/auto" schemaLocation="Auto.xsd"/>
+  <xs:element name="getautosresponse" type="tns:getautosresponse"/>
+  <xs:complexType name="getautosresponse">
+    <xs:sequence>
+      <xs:element name="auto" minOccurs="0" maxOccurs="unbounded" type="autons:auto"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\lucas\workspace\parkserviceopenshift\parkeerplaatsservice\src\main\java\xmlfiles\VerwijderAutoRequest.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://parkeerplaatsservice/berichten/verwijderautorequest" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://parkeerplaatsservice/berichten/verwijderautorequest" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:autons="http://parkeerplaatsservice/objecten/auto">
+  <xs:import namespace="http://parkeerplaatsservice/objecten/auto" schemaLocation="Auto.xsd"/>
+  <xs:element name="verwijderautorequest" type="tns:verwijderautorequest"/>
+  <xs:complexType name="verwijderautorequest">
+    <xs:all minOccurs="0">
+      <xs:element name="kenteken" type="autons:kenteken"/>
+    </xs:all>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\lucas\workspace\parkserviceopenshift\parkeerplaatsservice\src\main\java\xmlfiles\Fault.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://parkeerplaatsservice/errors/fault" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://parkeerplaatsservice/errors/fault">
+  <xs:element name="fault" type="tns:fault"/>
+  <xs:complexType name="fault">
+    <xs:sequence>
+      <xs:element name="errorCode" type="xs:short" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="message" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8081/services/</con:endpoint><con:endpoint>http://parkeerplaatsserivce/services/</con:endpoint></con:endpoints><con:operation id="676cbab1-bcb1-4eb8-acb0-665761ba17f8" isOneWay="false" action="" name="getAantalParkeerplaatsen" bindingOperationName="getAantalParkeerplaatsen" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8bc6eec0-387b-4034-a15f-784ab06aced4" name="Request 1" outgoingWss="" incomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/services/getParkeerplaatsen</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://parkeerplaatsservice/berichten/getaantallenrequest">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <get:getaantallen>\r
+      </get:getaantallen>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://parkeerplaatsservice/berichten/message/PkS-Interface/getAantalParkeerplaatsenRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="5395532f-8670-4818-9c6a-37532cb72475" isOneWay="false" action="" name="getGeparkeerdeAutos" bindingOperationName="getGeparkeerdeAutos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4ac11320-1b07-4684-818c-ee82c6e4f546" name="Request 1" outgoingWss="" incomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/services/getGeparkeerdeAutos</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://parkeerplaatsservice/berichten/getautosrequest">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <get:getautosrequest>\r
+      </get:getautosrequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://parkeerplaatsservice/berichten/message/PkS-Interface/getGeparkeerdeAutosRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="a404bc14-d3ee-4079-9d5d-89f09243fb7b" isOneWay="false" action="" name="nieuweAuto" bindingOperationName="nieuweAuto" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c316e664-0ec9-41f1-b961-402b97ce86d6" name="Request 1" outgoingWss="" incomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/services/nieuweAuto</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nie="http://parkeerplaatsservice/berichten/nieuweautorequest">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <nie:nieuweautorequest>\r
+         <!--You may enter the following 2 items in any order-->\r
+         <kenteken>AB-12-34</kenteken>\r
+         <!--Optional:-->\r
+         <merk>BMW</merk>\r
+      </nie:nieuweautorequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://parkeerplaatsservice/berichten/message/PkS-Interface/nieuweAutoRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="049210d9-0f30-4082-b98e-1b01b53611b8" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/services/nieuweAuto</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nie="http://parkeerplaatsservice/berichten/nieuweautorequest">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <nie:nieuweautorequest>\r
+         <!--You may enter the following 2 items in any order-->\r
+         <kenteken>ABC-98-D</kenteken>\r
+      </nie:nieuweautorequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://parkeerplaatsservice/berichten/message/PkS-Interface/nieuweAutoRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8627bcde-fd4c-48d0-bde4-866583f7b209" isOneWay="false" action="" name="verwijderAuto" bindingOperationName="verwijderAuto" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cc739fc6-65e4-4be3-8095-283453c1d16b" name="Request 1" outgoingWss="" incomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/services/verwijderAuto</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://parkeerplaatsservice/berichten/verwijderautorequest">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ver:verwijderautorequest>\r
+         <!--You may enter the following 1 items in any order-->\r
+         <kenteken>AB-12-34</kenteken>\r
+      </ver:verwijderautorequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://parkeerplaatsservice/berichten/message/PkS-Interface/verwijderAutoRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="81a57fa0-0e8d-4057-90ab-7bb77a6e9ad7" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="1cb99cb9-9656-418b-98e3-1540db68abc3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="request" id="ab911a38-e0e0-4531-b1e5-6a08e150569a" name="getAantalParkeerplaatsen - Request 1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WS-Binding</con:interface><con:operation>getAantalParkeerplaatsen</con:operation><con:request name="getAantalParkeerplaatsen - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="6b7a2760-806b-4821-a564-6d10a436daa6"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/services/getParkeerplaatsen</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://parkeerplaatsservice/berichten/getaantallenrequest">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <get:getaantallen>\r
+      </get:getaantallen>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d9141e17-4157-45c4-acfa-af926b49a45c" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="25c2f967-2d8e-4ee9-8627-bab32f1e43ed" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="6ab5b85d-2e9f-4bb9-8326-cb48bf95f82a" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://parkeerplaatsservice/berichten/message/PkS-Interface/getAantalParkeerplaatsenRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="88f6bc8b-d391-4174-8c48-28aee886ee43" name="getGeparkeerdeAutos - Request 1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WS-Binding</con:interface><con:operation>getGeparkeerdeAutos</con:operation><con:request name="getGeparkeerdeAutos - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="631a2b95-24cb-4569-960a-72e07762cd0c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/services/getGeparkeerdeAutos</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://parkeerplaatsservice/berichten/getautosrequest">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <get:getautosrequest>\r
+      </get:getautosrequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="cfaa791b-1471-4fbc-87ea-5b23121c0419" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="22692c76-3fda-4814-a2a6-16a03765462b" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="d89d24a8-32f7-488a-948c-96df66b83f1c" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://parkeerplaatsservice/berichten/message/PkS-Interface/getGeparkeerdeAutosRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="26fa43ca-f67c-4ad0-8aaa-3f26ed742a8f" name="nieuweAuto - Request 1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WS-Binding</con:interface><con:operation>nieuweAuto</con:operation><con:request name="nieuweAuto - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b8867a1c-9348-47fb-86cb-ada454c73d30"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/services/nieuweAuto</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nie="http://parkeerplaatsservice/berichten/nieuweautorequest">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <nie:nieuweautorequest>\r
+         <!--You may enter the following 2 items in any order-->\r
+         <kenteken>12-ABC-3</kenteken>\r
+         <!--Optional:-->\r
+         <merk>Volvo</merk>\r
+      </nie:nieuweautorequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="33dbbbca-3bf0-4fc0-ab83-3553595718d0" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="7d5ff67e-8027-4ffc-a349-ae513c10f073" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="983c5345-2b17-495f-9ed1-94dd2a99d63d" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://parkeerplaatsservice/berichten/message/PkS-Interface/nieuweAutoRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="3d6e0486-ef96-4ee6-b81a-e73ba30a2d92" name="getAantalParkeerplaatsen - Request 2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WS-Binding</con:interface><con:operation>getAantalParkeerplaatsen</con:operation><con:request name="getAantalParkeerplaatsen - Request 2" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="6b7a2760-806b-4821-a564-6d10a436daa6"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/services/getParkeerplaatsen</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://parkeerplaatsservice/berichten/getaantallenrequest">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <get:getaantallen>\r
+      </get:getaantallen>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d9141e17-4157-45c4-acfa-af926b49a45c" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="25c2f967-2d8e-4ee9-8627-bab32f1e43ed" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="6ab5b85d-2e9f-4bb9-8326-cb48bf95f82a" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://parkeerplaatsservice/berichten/message/PkS-Interface/getAantalParkeerplaatsenRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="b871b926-4cb6-4d9c-b9aa-5e857f9cab4c" name="getGeparkeerdeAutos - Request 2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WS-Binding</con:interface><con:operation>getGeparkeerdeAutos</con:operation><con:request name="getGeparkeerdeAutos - Request 2" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="631a2b95-24cb-4569-960a-72e07762cd0c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/services/getGeparkeerdeAutos</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://parkeerplaatsservice/berichten/getautosrequest">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <get:getautosrequest>\r
+      </get:getautosrequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="cfaa791b-1471-4fbc-87ea-5b23121c0419" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="22692c76-3fda-4814-a2a6-16a03765462b" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="d89d24a8-32f7-488a-948c-96df66b83f1c" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://parkeerplaatsservice/berichten/message/PkS-Interface/getGeparkeerdeAutosRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="37ea6d5a-a091-4b5d-b13a-71834f565e48" name="verwijderAuto - Request 1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WS-Binding</con:interface><con:operation>verwijderAuto</con:operation><con:request name="verwijderAuto - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="d573ffcf-cfbf-4b44-868a-17193647caa8"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/services/verwijderAuto</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://parkeerplaatsservice/berichten/verwijderautorequest">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ver:verwijderautorequest>\r
+         <!--You may enter the following 1 items in any order-->\r
+         <kenteken>12-ABC-3</kenteken>\r
+      </ver:verwijderautorequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="e76b75e7-13f1-4ba5-8617-86d192ad2515" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="75e25029-610e-4b9d-9c84-946b0d89dc34" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="ca200687-bc17-4742-a4d3-3e72bffa3cae" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://parkeerplaatsservice/berichten/message/PkS-Interface/verwijderAutoRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="2f1da07b-cd83-475c-a046-25ba2f53751f" name="getAantalParkeerplaatsen - Request 3"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WS-Binding</con:interface><con:operation>getAantalParkeerplaatsen</con:operation><con:request name="getAantalParkeerplaatsen - Request 3" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="6b7a2760-806b-4821-a564-6d10a436daa6"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/services/getParkeerplaatsen</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://parkeerplaatsservice/berichten/getaantallenrequest">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <get:getaantallen>\r
+      </get:getaantallen>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d9141e17-4157-45c4-acfa-af926b49a45c" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="25c2f967-2d8e-4ee9-8627-bab32f1e43ed" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="6ab5b85d-2e9f-4bb9-8326-cb48bf95f82a" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://parkeerplaatsservice/berichten/message/PkS-Interface/getAantalParkeerplaatsenRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="865aede6-529f-47ca-9bca-4d6b55723cbf" name="getGeparkeerdeAutos - Request 3"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WS-Binding</con:interface><con:operation>getGeparkeerdeAutos</con:operation><con:request name="getGeparkeerdeAutos - Request 3" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="631a2b95-24cb-4569-960a-72e07762cd0c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/services/getGeparkeerdeAutos</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://parkeerplaatsservice/berichten/getautosrequest">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <get:getautosrequest>\r
+      </get:getautosrequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="cfaa791b-1471-4fbc-87ea-5b23121c0419" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="22692c76-3fda-4814-a2a6-16a03765462b" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="d89d24a8-32f7-488a-948c-96df66b83f1c" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://parkeerplaatsservice/berichten/message/PkS-Interface/getGeparkeerdeAutosRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

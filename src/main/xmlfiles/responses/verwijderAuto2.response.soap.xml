@@ -1,0 +1,7 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <ns4:nieuweautoresponse xmlns:ns2="http://parkeerplaatsservice/berichten/getaantallenresponse" xmlns:ns3="http://parkeerplaatsservice/berichten/getautosresponse" xmlns:ns4="http://parkeerplaatsservice/berichten/nieuweautoresponse" xmlns:ns5="http://parkeerplaatsservice/errors/fault" xmlns:ns6="http://parkeerplaatsservice/berichten/nieuweautorequest" xmlns:ns7="http://parkeerplaatsservice/berichten/getautosrequest" xmlns:ns8="http://parkeerplaatsservice/berichten/verwijderautorequest" xmlns:ns9="http://parkeerplaatsservice/berichten/getaantallenrequest" xmlns:ns10="http://parkeerplaatsservice/objecten/auto" xmlns:ns11="http://parkeerplaatsservice/enums/automerk">
+         <gelukt>true</gelukt>
+      </ns4:nieuweautoresponse>
+   </S:Body>
+</S:Envelope>

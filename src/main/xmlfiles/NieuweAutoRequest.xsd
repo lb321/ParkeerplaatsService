@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://parkeerplaatsservice/berichten/nieuweautorequest" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+           xmlns:autons="http://parkeerplaatsservice/objecten/auto"
+           xmlns:automerk="http://parkeerplaatsservice/enums/automerk"
+           targetNamespace="http://parkeerplaatsservice/berichten/nieuweautorequest">
+    <xs:import namespace="http://parkeerplaatsservice/objecten/auto" schemaLocation="Auto.xsd" />
+    <xs:import namespace="http://parkeerplaatsservice/enums/automerk" schemaLocation="AutoMerk.xsd" />
+    <xs:element name="nieuweautorequest" type="tns:nieuweautorequest" />
+        <xs:complexType name="nieuweautorequest">
+            <xs:all>
+                <xs:element name="kenteken" type="autons:kenteken" minOccurs="1" maxOccurs="1"/>
+                <!-- merk is niet verplicht, kenteken wel -->
+                <xs:element name="merk" type="automerk:automerk" minOccurs="0" maxOccurs="1"/>
+            </xs:all>
+        </xs:complexType>
+</xs:schema>

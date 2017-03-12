@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://parkeerplaatsservice/objecten/auto"
+           xmlns:automerk="http://parkeerplaatsservice/enums/automerk"
+           targetNamespace="http://parkeerplaatsservice/objecten/auto">
+
+    <xs:import namespace="http://parkeerplaatsservice/enums/automerk" schemaLocation="AutoMerk.xsd" />
+    <xs:element name="auto" type="tns:auto"/>
+    <xs:complexType name="auto">
+        <xs:sequence>
+            <xs:element name="kenteken" type="tns:kenteken" minOccurs="1"></xs:element>
+            <xs:element name="aankomst" type="xs:dateTime" minOccurs="1"></xs:element>
+            <xs:element name="vertrek" type="xs:dateTime" minOccurs="0"></xs:element>
+            <xs:element name="merk" type="automerk:automerk" minOccurs="0"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="kenteken">
+        <xs:restriction base="xs:string">
+            <xs:length value="8"/>
+            <!-- het kenteken is 8 characters lang en moet aan 1 van de onderstaande patronen voldoen -->
+            <!-- \S = any character that is not white space,  \d = any digit -->
+            <xs:pattern value="\S\S-\d\d-\d\d|\d\d-\d\d-\S\S|\d\d-\S\S-\d\d|\S\S-\S\S-\d\d|\d\d-\S\S-\S\S|\d\d-\S\S\S-\d|\d-\S\S\S-\d\d|\S\S-\d\d\d-\S|\S-\d\d\d-\S\S|\S\S\S-\d\d-\S"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

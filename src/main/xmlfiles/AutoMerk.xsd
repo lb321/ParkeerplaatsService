@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://parkeerplaatsservice/enums/automerk"
+           targetNamespace="http://parkeerplaatsservice/enums/automerk">
+    <xs:element name="automerk" type="tns:automerk"/>
+    <xs:simpleType name="automerk">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Audi" />
+            <xs:enumeration value="Volkswagen" />
+            <xs:enumeration value="Volvo" />
+            <xs:enumeration value="BMW" />
+            <xs:enumeration value="Mercedes" />
+            <xs:enumeration value="Toyota" />
+            <xs:enumeration value="Seat" />
+            <xs:enumeration value="Opel" />
+            <xs:enumeration value="Saab" />
+            <xs:enumeration value="Honda" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

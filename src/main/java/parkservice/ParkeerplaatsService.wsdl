@@ -1,0 +1,130 @@
+<wsdl:definitions
+        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+        xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:getreq="http://parkeerplaatsservice/berichten/getaantallenrequest"
+        xmlns:getrsp="http://parkeerplaatsservice/berichten/getaantallenresponse"
+        xmlns:nieuwreq="http://parkeerplaatsservice/berichten/nieuweautorequest"
+        xmlns:nieuwrsp="http://parkeerplaatsservice/berichten/nieuweautoresponse"
+        xmlns:getautosreq="http://parkeerplaatsservice/berichten/getautosrequest"
+        xmlns:getautosrsp="http://parkeerplaatsservice/berichten/getautosresponse"
+        xmlns:verwijderautoreq="http://parkeerplaatsservice/berichten/verwijderautorequest"
+        xmlns:fault="http://parkeerplaatsservice/errors/fault"
+        xmlns:tns="http://parkeerplaatsservice/berichten/message"
+        targetNamespace="http://parkeerplaatsservice/berichten/message">
+    <wsdl:types>
+        <xsd:schema>
+            <xsd:import namespace="http://parkeerplaatsservice/berichten/getaantallenrequest" schemaLocation="GetAantallenRequest.xsd" />
+            <xsd:import namespace="http://parkeerplaatsservice/berichten/getaantallenresponse" schemaLocation="GetAantallenResponse.xsd" />
+            <xsd:import namespace="http://parkeerplaatsservice/berichten/nieuweautorequest" schemaLocation="NieuweAutoRequest.xsd" />
+            <xsd:import namespace="http://parkeerplaatsservice/berichten/nieuweautoresponse" schemaLocation="NieuweAutoResponse.xsd" />
+            <xsd:import namespace="http://parkeerplaatsservice/berichten/getautosrequest" schemaLocation="GetAutosRequest.xsd" />
+            <xsd:import namespace="http://parkeerplaatsservice/berichten/getautosresponse" schemaLocation="GetAutosResponse.xsd" />
+            <xsd:import namespace="http://parkeerplaatsservice/berichten/verwijderautorequest" schemaLocation="VerwijderAutoRequest.xsd" />
+            <xsd:import namespace="http://parkeerplaatsservice/errors/fault" schemaLocation="Fault.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="getrequest">
+        <wsdl:part name="getrequest" element="getreq:getaantallen" />
+    </wsdl:message>
+    <wsdl:message name="getresponse">
+        <wsdl:part name="getresponse" element="getrsp:getaantallenresponse" />
+    </wsdl:message>
+    <wsdl:message name="nieuwrequest">
+        <wsdl:part name="nieuwrequest" element="nieuwreq:nieuweautorequest"/>
+    </wsdl:message>
+    <wsdl:message name="nieuwresponse">
+        <wsdl:part name="nieuwresponse" element="nieuwrsp:nieuweautoresponse"/>
+    </wsdl:message>
+    <wsdl:message name="getautosrequest">
+        <wsdl:part name="getautosrequest" element="getautosreq:getautosrequest"/>
+    </wsdl:message>
+    <wsdl:message name="getautosresponse">
+        <wsdl:part name="getautosresponse" element="getautosrsp:getautosresponse"/>
+    </wsdl:message>
+    <wsdl:message name="verwijderautorequest">
+        <wsdl:part name="verwijderautorequest" element="verwijderautoreq:verwijderautorequest"/>
+    </wsdl:message>
+    <wsdl:message name="inputfault">
+        <wsdl:part name="fault" element="fault:fault"/>
+    </wsdl:message>
+    <wsdl:portType name="PkS-Interface">
+        <wsdl:operation name="getAantalParkeerplaatsen">
+            <wsdl:input message="tns:getrequest" />
+            <wsdl:output message="tns:getresponse" />
+            <wsdl:fault name="inputfault" message="tns:inputfault"/>
+        </wsdl:operation>
+        <wsdl:operation name="nieuweAuto">
+            <wsdl:input message="tns:nieuwrequest"/>
+            <wsdl:output message="tns:nieuwresponse"/>
+            <wsdl:fault name="inputfault" message="tns:inputfault"/>
+        </wsdl:operation>
+        <wsdl:operation name="getGeparkeerdeAutos">
+            <wsdl:input message="tns:getautosrequest"/>
+            <wsdl:output message="tns:getautosresponse"/>
+            <wsdl:fault name="inputfault" message="tns:inputfault"/>
+        </wsdl:operation>
+        <wsdl:operation name="verwijderAuto">
+            <wsdl:input message="tns:verwijderautorequest"/>
+            <wsdl:output message="tns:nieuwresponse"/>
+            <wsdl:fault name="inputfault" message="tns:inputfault"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="WS-Binding" type="tns:PkS-Interface">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+        <wsdl:operation name="getAantalParkeerplaatsen">
+            <soap:operation soapAction="" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+            <wsdl:fault name="inputfault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="nieuweAuto">
+            <soap:operation soapAction="" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+            <wsdl:fault name="inputfault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getGeparkeerdeAutos">
+            <soap:operation soapAction="" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+            <wsdl:fault name="inputfault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="verwijderAuto">
+            <soap:operation soapAction="" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+            <wsdl:fault name="inputfault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="parkeerplaatsService">
+        <wsdl:port name="WS-Port" binding="tns:WS-Binding">
+            <soap:address location="http://parkeerplaatsserivce/services/" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
