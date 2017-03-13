@@ -5,6 +5,8 @@ import com.google.gson.GsonBuilder;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.io.*;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 public class JsonConverter {
@@ -14,22 +16,27 @@ public class JsonConverter {
     private static Gson gson;
 
     public JsonConverter(){
-        URL url = this.getClass().getClassLoader().getResource(filename);
-        if(url != null)
-            path = this.getClass().getClassLoader().getResource(filename).getPath();
-        else { //het bestand bestaat nog niet, dus bestand aanmaken en standaard parkeerplaats erin zetten
-            File newFile = new File(JsonConverter.class.getProtectionDomain().getCodeSource().getLocation().getPath() + filename);
-            try {
+        URL url = null;
+        try {
+            url = this.getClass().getClassLoader().getResource(filename);
+            if (url != null)
+                path = url.toURI().getPath();
+            else { //het bestand bestaat nog niet, dus bestand aanmaken en standaard parkeerplaats erin zetten
+                File newFile = new File(JsonConverter.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath() + filename);
+                System.out.println(JsonConverter.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath());
                 //maak bestand aan
                 newFile.getParentFile().mkdirs();
                 newFile.createNewFile();
-                //schrijf standaard parkeer plaats in bestand
-                parkeerplaatsToJson(new Parkeerplaats(10,10,0));
                 url = this.getClass().getClassLoader().getResource(filename);
-                path = url.getPath();
-            } catch (IOException e) {
-                e.printStackTrace();
+                path = url.toURI().getPath();
+                System.out.println("final path: " + path);
+                //schrijf standaard parkeer plaats in bestand
+                parkeerplaatsToJson(new Parkeerplaats());
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
         }
     }
 
